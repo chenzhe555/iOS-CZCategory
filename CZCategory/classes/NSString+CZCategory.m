@@ -24,6 +24,8 @@
     //获取每一行的高度
     CGSize lineSize = [self getLineSize:font];
     CGSize allSize = [self getAllSize:font lines:lines maxWidth:maxWidth];
+    lineSize = CGSizeMake((int)ceilf(lineSize.width), (int)ceilf(lineSize.height));
+    allSize = CGSizeMake((int)ceilf(allSize.width), (int)ceilf(allSize.height));
     return [self getActualSize:lineSize allSize:allSize lines:lines maxWidth:maxWidth];
 }
 

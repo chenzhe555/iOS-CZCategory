@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
  @brief 获取当前主Window
  */
 -(UIWindow *)getMainWindow;
+
+/**
+ @brief 获取当前屏幕显示的VC
+ */
+-(UIViewController *)getCurrentShowVC;
 @end
 
 NS_ASSUME_NONNULL_END
