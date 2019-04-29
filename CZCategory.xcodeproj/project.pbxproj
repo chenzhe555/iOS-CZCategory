@@ -16,6 +16,8 @@
 		947A379022606EBF004BF175 /* NSString+CZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A378F22606EBF004BF175 /* NSString+CZCategory.m */; };
 		947A379322607446004BF175 /* NSObject+CZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A379222607446004BF175 /* NSObject+CZCategory.m */; };
 		947A379622607CB8004BF175 /* UIView+CZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A379522607CB8004BF175 /* UIView+CZCategory.m */; };
+		94BD939122742EDC005DDDAA /* NSDictionary+CZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BD939022742EDC005DDDAA /* NSDictionary+CZCategory.m */; };
+		94BD939422742F01005DDDAA /* NSArray+CZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BD939322742F01005DDDAA /* NSArray+CZCategory.m */; };
 		C141BF16655E21BD48C2658B /* libPods-CZCategory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25028ABAA05E248A30162C33 /* libPods-CZCategory.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,10 @@
 		947A379422607CB8004BF175 /* UIView+CZCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CZCategory.h"; sourceTree = "<group>"; };
 		947A379522607CB8004BF175 /* UIView+CZCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZCategory.m"; sourceTree = "<group>"; };
 		947A3797226088A2004BF175 /* CZCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZCategory.h; sourceTree = "<group>"; };
+		94BD938F22742EDC005DDDAA /* NSDictionary+CZCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CZCategory.h"; sourceTree = "<group>"; };
+		94BD939022742EDC005DDDAA /* NSDictionary+CZCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CZCategory.m"; sourceTree = "<group>"; };
+		94BD939222742F01005DDDAA /* NSArray+CZCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+CZCategory.h"; sourceTree = "<group>"; };
+		94BD939322742F01005DDDAA /* NSArray+CZCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CZCategory.m"; sourceTree = "<group>"; };
 		F98754BF72CAC6E6A30EB2BE /* Pods-CZCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZCategory.release.xcconfig"; path = "Pods/Target Support Files/Pods-CZCategory/Pods-CZCategory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +114,10 @@
 				947A379222607446004BF175 /* NSObject+CZCategory.m */,
 				947A379422607CB8004BF175 /* UIView+CZCategory.h */,
 				947A379522607CB8004BF175 /* UIView+CZCategory.m */,
+				94BD938F22742EDC005DDDAA /* NSDictionary+CZCategory.h */,
+				94BD939022742EDC005DDDAA /* NSDictionary+CZCategory.m */,
+				94BD939222742F01005DDDAA /* NSArray+CZCategory.h */,
+				94BD939322742F01005DDDAA /* NSArray+CZCategory.m */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -215,7 +225,9 @@
 				947A377C226046AE004BF175 /* ViewController.m in Sources */,
 				947A379622607CB8004BF175 /* UIView+CZCategory.m in Sources */,
 				947A3787226046B0004BF175 /* main.m in Sources */,
+				94BD939122742EDC005DDDAA /* NSDictionary+CZCategory.m in Sources */,
 				947A379322607446004BF175 /* NSObject+CZCategory.m in Sources */,
+				94BD939422742F01005DDDAA /* NSArray+CZCategory.m in Sources */,
 				947A379022606EBF004BF175 /* NSString+CZCategory.m in Sources */,
 				947A3779226046AE004BF175 /* AppDelegate.m in Sources */,
 			);

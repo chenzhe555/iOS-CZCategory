@@ -7,8 +7,11 @@
 //
 
 #import "NSObject+CZCategory.h"
+#import <objc/runtime.h>
 
 @implementation NSObject (CZCategory)
+
+#pragma mark 视图相关
 /**
  @brief 获取当前主Window
  */
@@ -52,5 +55,31 @@
         currentVC = rootVC;
     }
     return currentVC;
+}
+
+#pragma mark Swizzle 相关
++(BOOL)replaceInstanceMethodWithOriginSEL:(SEL)originSEL newSEL:(SEL)newSEL class:(Class)class
+{
+    Class replaceClass = class ? class : object_getClass(self);
+    Method originalMethod = class_getInstanceMethod(replaceClass, originSEL);
+    Method newMethod = class_getInstanceMethod(replaceClass, newSEL);
+    if (!originalMethod || !newMethod) return NO;
+    
+    class_addMethod(replaceClass, originSEL, class_getMethodImplementation(replaceClass, originSEL), method_getTypeEncoding(originalMethod));
+    class_addMethod(replaceClass, newSEL, class_getMethodImplementation(replaceClass, newSEL), method_getTypeEncoding(newMethod));
+    
+    method_exchangeImplementations(class_getInstanceMethod(replaceClass, originSEL), class_getInstanceMethod(replaceClass, newSEL));
+    return YES;
+}
+
++(BOOL)replaceClassMethodWithOriginSEL:(SEL)originSEL newSEL:(SEL)newSEL class:(Class)class
+{
+    Class replaceClass = class ? class : object_getClass(self);
+    Method originalMethod = class_getInstanceMethod(replaceClass, originSEL);
+    Method newMethod = class_getInstanceMethod(replaceClass, newSEL);
+    if (!originalMethod || !newMethod) return NO;
+    
+    method_exchangeImplementations(originalMethod, newMethod);
+    return YES;
 }
 @end

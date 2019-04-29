@@ -74,4 +74,21 @@
         }
     }
 }
+
+-(NSString *)trim
+{
+    if (self.length <= 0) return @"";
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+-(BOOL)isPhoneWithElevenDigit
+{
+    return [self regularJudgeWithRegString:@"^d{11}$"];
+}
+
+#pragma mark 辅助方法
+-(BOOL)regularJudgeWithRegString:(NSString *)regString
+{
+   return [[NSPredicate predicateWithFormat:@"SELF MATCHES %@",regString] evaluateWithObject:self];
+}
 @end

@@ -23,6 +23,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(CGSize)getTextActualSize:(UIFont *)font lines:(NSInteger)lines maxWidth:(CGFloat)maxWidth;
 
+/**
+ @brief 去掉前后空格
+ */
+-(NSString *)trim;
+
+/**
+ @brief 仅判断当前手机号是否是11位数字
+ */
+-(BOOL)isPhoneWithElevenDigit;
+
 @end
 
 NS_ASSUME_NONNULL_END

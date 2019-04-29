@@ -23,6 +23,24 @@ NS_ASSUME_NONNULL_BEGIN
  @brief 获取当前屏幕显示的VC
  */
 -(UIViewController *)getCurrentShowVC;
+
+#pragma mark Swizzle 相关
+
+/**
+ @brief 替换实例方法实现
+
+ @param originSEL 原方法
+ @param newSEL 新方法
+ */
++(BOOL)replaceInstanceMethodWithOriginSEL:(SEL)originSEL newSEL:(SEL)newSEL class:(Class _Nullable)class;
+
+/**
+ @brief 替换类方法实现
+
+ @param originSEL 原方法
+ @param newSEL 新方法
+ */
++(BOOL)replaceClassMethodWithOriginSEL:(SEL)originSEL newSEL:(SEL)newSEL class:(Class _Nullable)class;
 @end
 
 NS_ASSUME_NONNULL_END

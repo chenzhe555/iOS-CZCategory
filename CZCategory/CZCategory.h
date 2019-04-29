@@ -12,5 +12,7 @@
 #import "NSString+CZCategory.h"
 #import "NSObject+CZCategory.h"
 #import "UIView+CZCategory.h"
+#import "NSDictionary+CZCategory.h"
+#import "NSArray+CZCategory.h"
 
 #endif /* CZCategory_h */
